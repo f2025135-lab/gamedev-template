@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" role="img" aria-labelledby="title desc">
+  <title id="title">かわいい女の子のキャラクター</title>
+  <desc id="desc">ピンクのリボンと青い服を着たオリジナルキャラクター</desc>
+  <defs>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d5dfc"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="128" cy="302" rx="72" ry="12" fill="#172554" opacity=".2"/>
+  <path d="M69 205c-18 17-25 46-21 75h35l11-50z" fill="#f9a8d4" stroke="#312e81" stroke-width="5"/>
+  <path d="M187 205c18 17 25 46 21 75h-35l-11-50z" fill="#f9a8d4" stroke="#312e81" stroke-width="5"/>
+  <path d="M76 185c-3 34 5 74 20 94h64c15-20 23-60 20-94z" fill="url(#dress)" stroke="#312e81" stroke-width="6"/>
+  <path d="M96 273h27v27H93zM133 273h27v27h-30z" fill="#f8b4d9" stroke="#312e81" stroke-width="5"/>
+  <path d="M108 217l20 23 20-23-20-16z" fill="#fef08a" stroke="#312e81" stroke-width="4"/>
+  <path d="M66 106c-4-57 24-88 65-88s69 31 65 88l-12 76H73z" fill="url(#hair)" stroke="#312e81" stroke-width="6"/>
+  <path d="M77 100c0-38 22-62 51-62s51 24 51 62v63c0 35-23 57-51 57s-51-22-51-57z" fill="#ffd6bf" stroke="#312e81" stroke-width="5"/>
+  <path d="M78 106c5-49 28-65 53-65 28 0 45 20 50 58-18-7-30-19-43-36-14 25-34 39-60 43z" fill="url(#hair)"/>
+  <path d="M77 118c-19-5-26-22-15-34 9-9 20-5 27 4zM179 118c19-5 26-22 15-34-9-9-20-5-27 4z" fill="#8b78ff" stroke="#312e81" stroke-width="5"/>
+  <ellipse cx="105" cy="130" rx="9" ry="14" fill="#312e81"/>
+  <ellipse cx="151" cy="130" rx="9" ry="14" fill="#312e81"/>
+  <circle cx="108" cy="126" r="3" fill="#fff"/>
+  <circle cx="154" cy="126" r="3" fill="#fff"/>
+  <path d="M118 159q10 8 20 0" fill="none" stroke="#be185d" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="91" cy="158" rx="13" ry="6" fill="#f9a8d4" opacity=".8"/>
+  <ellipse cx="165" cy="158" rx="13" ry="6" fill="#f9a8d4" opacity=".8"/>
+  <path d="M83 55c-1-27 18-43 45-43s46 16 45 43c-18-12-30-17-45-17S101 43 83 55z" fill="#f9a8d4" stroke="#312e81" stroke-width="5"/>
+  <path d="M128 19l9-13 9 13-9 14z" fill="#fef08a" stroke="#312e81" stroke-width="4"/>
+</svg>

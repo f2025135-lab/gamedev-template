@@ -16,27 +16,40 @@ export class ResultScene extends Phaser.Scene {
     this.result = data.result ?? 'defeat';
   }
 
+  preload(): void {
+    if (this.result === 'victory') {
+      this.load.image('reward-character', 'reward.png');
+    } else {
+      this.load.image('lose-character', 'lose.png');
+    }
+  }
+
   create(): void {
     const isVictory = this.result === 'victory';
     const centerX = GAME_SIZE.width / 2;
     const centerY = GAME_SIZE.height / 2;
 
     this.cameras.main.setBackgroundColor(isVictory ? '#14532d' : '#450a0a');
-    this.add.text(centerX, centerY - 100, isVictory ? '勝利！' : '敗北', {
+    this.add.text(centerX, isVictory ? centerY - 340 : centerY - 340, isVictory ? '勝利！' : '敗北', {
       fontFamily: 'sans-serif',
       fontSize: '64px',
       color: '#f8fafc',
-    }).setOrigin(0.5);
+    }).setOrigin(0.5).setDepth(2);
 
     if (isVictory) {
-      this.add.text(centerX, centerY, 'ご褒美シーン（タスク9で追加）', {
+      this.add.image(centerX, centerY - 30, 'reward-character')
+        .setDisplaySize(360, 600);
+      this.add.text(centerX, centerY + 285, 'ご褒美！', {
         fontFamily: 'sans-serif',
         fontSize: '26px',
         color: '#bbf7d0',
       }).setOrigin(0.5);
+    } else {
+      this.add.image(centerX, centerY - 30, 'lose-character')
+        .setDisplaySize(360, 600);
     }
 
-    this.add.text(centerX, centerY + 100, 'R: 再挑戦    T: タイトル画面', {
+    this.add.text(centerX, isVictory ? centerY + 335 : centerY + 335, 'R: 再挑戦    T: タイトル画面', {
       fontFamily: 'sans-serif',
       fontSize: '24px',
       color: '#e2e8f0',

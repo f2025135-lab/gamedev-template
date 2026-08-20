@@ -16,7 +16,11 @@ export const CONTROL_KEYS = {
 export const PLAYER_CONFIG = {
   maxHp: 100,
   moveSpeed: 180,
-  jumpVelocity: 400,
+  jumpVelocity: 650,
+  smallJumpVelocity: 300,
+  dashSpeed: 520,
+  dashDurationMs: 180,
+  dashCooldownMs: 800,
   bulletDamage: 10,
   bulletSpeed: 500,
   shootCooldownMs: 250,
@@ -37,11 +41,12 @@ export const BOSS_CONFIG = {
   moveSpeed: 40,
   attackDamage: 20,
   attackCooldownMs: 1500,
-  bulletSpeed: 320,
+  bulletSpeed: 3200,
 } as const;
 
 export const GAME_RULES = {
-  hasTimeLimit: false,
+  hasTimeLimit: true,
+  timeLimitSeconds: 60,
   goalRequiresBossDefeat: true,
   defeatAtHp: 0,
 } as const;

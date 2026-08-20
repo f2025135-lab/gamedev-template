@@ -14,6 +14,13 @@ const config: Phaser.Types.Core.GameConfig = {
     width: GAME_SIZE.width,
     height: GAME_SIZE.height,
   },
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { x: 0, y: 900 },
+      debug: false,
+    },
+  },
   scene: [TitleScene, GameScene, ResultScene],
 };
 

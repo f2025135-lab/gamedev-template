@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { CONTROL_KEYS, GAME_SIZE } from '../config/gameConstants';
+import { GAME_SIZE } from '../config/gameConstants';
 
 export class TitleScene extends Phaser.Scene {
   constructor() {
@@ -23,8 +23,12 @@ export class TitleScene extends Phaser.Scene {
       color: '#93c5fd',
     }).setOrigin(0.5);
 
-    const startKey = this.input.keyboard?.addKey(CONTROL_KEYS.start);
-    startKey?.once('down', () => {
+    if (!this.input.keyboard) {
+      throw new Error('TitleScene requires keyboard input.');
+    }
+
+    const startKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
+    startKey.once('down', () => {
       this.scene.start('GameScene');
     });
   }
